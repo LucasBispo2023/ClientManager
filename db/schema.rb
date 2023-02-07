@@ -24,12 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_06_233314) do
   end
 
   create_table "clients", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "address"
-    t.string "zip_code"
-    t.string "telephone"
-    t.string "email"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "address", null: false
+    t.string "zip_code", null: false
+    t.string "telephone", null: false
+    t.string "email", null: false
     t.integer "admin_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

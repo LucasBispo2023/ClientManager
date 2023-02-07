@@ -1,0 +1,38 @@
+<div class="card shadow mb-4">
+
+<div class="card-body">
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col" width=100px><%= t(Admin.human_attribute_name(:id))%></th>
+        <th scope="col"><%= t(Admin.human_attribute_name(:email))%></th>
+        <th scope="col" width=120px>
+          <%= link_to new_admin_backoffice_admin_path , class:"btn btn-success btn-circle" do %>
+            <i class="fas fa-plus"></i>
+          <% end %>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @admins.each do |admin| %>
+        <tr>
+          <td scope="row"><%= admin.id %></td>
+          <td><%= admin.email %></td>
+          <td style: width=25px colspan=2>
+            <%= link_to edit_admin_backoffice_admin_path(admin), class: "btn btn-success btn-circle" do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
+
+            <%= button_to admin_backoffice_admin_path(admin), method: :delete, class: "btn btn-danger btn-circle",form: {style:"display:inline-block"}, data: {turbo_confirm: t('messages.confirm_with', item: admin.email.truncate(15))} do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+    <%= paginate @admins %>
+</div>
+</div>

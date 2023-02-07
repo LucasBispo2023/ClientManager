@@ -23,8 +23,11 @@
     <%= form.label :zip_code, class:"form-label"%>
     <%= form.text_field :zip_code, class:"form-control"%>
   </div>
-  <% #hidden_field :admin_id, current_admin.id %>
-  <div class="col-12">
-     <%= form.submit "Submit", class:"btn btn-primary"%>
-  </div>
+  <div class="col-md-4 d-flex" style="flex-direction:column-reverse">
+     <%= form.submit "Submit", class:"btn btn-success",style:"height:fit-content", id:"submit-button"%>
 <%end%>
+  </div>
+  <hr>
+  <div class="d-flex ms-auto" style="flex-direction:column-reverse">
+     <%= link_to "Voltar",:back, class:"btn btn-primary",style:"height:fit-content;",id:"back-button"%>
+  </div>

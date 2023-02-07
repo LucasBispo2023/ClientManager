@@ -1,5 +1,11 @@
 pt-BR:
   title:
     new_client: Novo Cliente
+    show_client: Detalhes do Cliente
     sign_in: Por favor, faça o login.
     sign_up: Por favor, inscreva-se
+    index: Clientes cadastrados no sistema
+  messages:
+    confirm_with: Tem certeza que deseja apagar cadastro de [%{item}] ?
+    new: Novo Cadastro de
+    editing: Editando Cadastro de

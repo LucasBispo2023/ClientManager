@@ -1,0 +1,11 @@
+<h1 class="display-5 fw-bold"><%= t('title.show_client')%></h1>
+<%= render partial: "clients/shared/form"%>
+<script>
+var field = document.getElementsByClassName("form-control");
+var button = document.getElementById("submit-button");
+var div = button.closest("div");
+for(i=0; i<field.length;i++){field[i].disabled = true;};
+button.disabled = true;
+
+
+</script>
