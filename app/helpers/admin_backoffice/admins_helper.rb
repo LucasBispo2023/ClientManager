@@ -1,0 +1,2 @@
+module AdminBackoffice::AdminsHelper
+end
