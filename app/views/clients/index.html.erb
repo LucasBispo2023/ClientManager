@@ -2,14 +2,14 @@
   <table class="table table-hover table-bordered table-responsive">
     <thead>
       <tr>
-            <th scope="col"><%= link_to Client.human_attribute_name(:id), "#" ,onclick:"selectedField('id')" %></th>
-            <th><%= link_to Client.human_attribute_name(:first_name), "#",onclick:"selectedField('first_name')"  %></th>
-            <th><%= link_to Client.human_attribute_name(:last_name), "#", onclick:"selectedField('last_name')"   %></th>
-            <th><%= link_to Client.human_attribute_name(:email), "#", onclick:"selectedField('email')"   %></th>
-            <th><%= link_to Client.human_attribute_name(:telephone), "#",onclick:"selectedField('telephone')"   %></th>
-            <th><%= link_to Client.human_attribute_name(:address), "#" ,onclick:"selectedField('address')"  %></th>
-            <th><%= link_to Client.human_attribute_name(:zip_code), "#" %></th>
-            <th>
+            <th scope="col"><%=  link_to Client.human_attribute_name(:id), :sort => "id"%></th>
+            <th><%= link_to  Client.human_attribute_name(:first_name), :sort => "first_name"%></th>
+            <th><%=  link_to Client.human_attribute_name(:last_name), :sort => "last_name"%></th>
+            <th><%=  link_to Client.human_attribute_name(:email), :sort => "email" %></th>
+            <th><%=  link_to Client.human_attribute_name(:telephone), :sort => "telephone" %></th>
+            <th><%= link_to  Client.human_attribute_name(:address), :sort => "address" %></th>
+            <th ><%= link_to  Client.human_attribute_name(:zip_code)%></th>
+            <th >
                 <%= link_to new_client_path, class: "btn btn-success btn-circle" do %>
                         <i class="fas fa-plus"></i>
                 <% end %>
@@ -28,11 +28,11 @@
             <td> <%=client.address%> </td>
             <td> <%=client.zip_code%> </td>
             <td class="btn-group">
-                <%= button_to edit_client_path(client.id),method: :get,  class: "btn btn-success btn-circle" do %>
-                    <i class="fas fa-edit"></i>
+                <%= link_to client_path(client.id),method: :get,  class: "btn btn-success btn-circle" do %>
+                    <i class="fas fa-search"></i>
                 <% end %>
 
-                <%= button_to client_path(client.id),method: :get, class: "btn btn-success btn-warning" do %>
+                <%= link_to edit_client_path(client.id),method: :get, class: "btn btn-success btn-warning" do %>
                     <i class="fas fa-edit"></i>
                 <% end %>
 

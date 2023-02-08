@@ -3,8 +3,9 @@ class ClientsController < ApplicationController
     before_action :set_client, only:[:show, :edit, :update, :destroy]
     before_action :params_client, only:[:update, :create]
 
+
     def index
-        @clients = Client.orderByName(params[:page])
+        @clients = Client.orderByName(params[:page],params[:sort || "id"])
     end
 
     def new

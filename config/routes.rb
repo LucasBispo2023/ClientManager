@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :clients
 
+
   # Defines the root path route ("/")
   root "welcome#index"
 end

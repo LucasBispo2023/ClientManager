@@ -1,31 +1,11 @@
 class Client < ApplicationRecord
   belongs_to :admin
   
-  paginates_per 10
+  paginates_per 5
 
-  scope :orderByName, -> (page,ord="asc"){
+  scope :orderByName, -> (page,field){
     includes(:admin).all
-    .order("first_name #{ord}").page(page)
-  }
-
-  scope :orderByLastName, -> (page){
-    includes(:admin).all
-    .order('last_name').page(page)
-  }
-
-  scope :orderByEmail, -> (page){
-    includes(:admin).all
-    .order('email').page(page)
-  }
-
-  scope :orderById, -> (page){
-    includes(:admin).all
-    .order('id').page(page)
-  }
-
-  scope :orderByAddress, -> (page){
-    includes(:admin).all
-    .order('address').page(page)
+    .order(field).page(page)
   }
   
 end
