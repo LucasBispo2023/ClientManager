@@ -96,6 +96,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dockerfile-rails (1.0.12)
+      rails
     erubi (1.12.0)
     faker (3.1.1)
       i18n (>= 1.8.11, < 2)
@@ -154,6 +156,7 @@ GEM
     nokogiri (1.14.1-x64-mingw-ucrt)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.5-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -260,12 +263,14 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise
+  dockerfile-rails (>= 1.0.0)
   faker
   i18n
   importmap-rails (~> 1.1)
   jbuilder
   jsbundling-rails
   kaminari
+  pg (~> 1.4)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   sassc-rails
