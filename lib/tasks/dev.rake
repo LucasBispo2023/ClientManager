@@ -22,8 +22,8 @@ namespace :dev do
       first_name: Faker::Name.first_name,
       last_name: Faker::Name.last_name,
       address: Faker::Address.street_address,
-      zip_code: Faker::Address.zip_code,
-      telephone: Faker::PhoneNumber.cell_phone,
+      zip_code: "#{rand(11111..99999)}-#{rand(111..999)}",
+      telephone: "(#{rand(10..30)}) #{rand(11111..99999)}-#{rand(1111..9999)}",
       email: Faker::Internet.email(name: :first_name)
     )    
     end

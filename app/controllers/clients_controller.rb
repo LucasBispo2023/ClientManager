@@ -2,6 +2,7 @@ class ClientsController < ApplicationController
     before_action :authenticate_admin!
     before_action :set_client, only:[:show, :edit, :update, :destroy]
     before_action :params_client, only:[:update, :create]
+    layout "main"
 
 
     def index

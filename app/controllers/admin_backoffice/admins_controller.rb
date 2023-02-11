@@ -2,6 +2,7 @@ class AdminBackoffice::AdminsController < ApplicationController
   before_action :authenticate_admin!
   before_action :verify_password, only: [:update]
   before_action :set_admin, only: [:edit, :update, :destroy]
+  layout 'main'
 
   def index
     @admins = Admin.all.page(params[:page])
