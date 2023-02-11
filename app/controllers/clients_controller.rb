@@ -14,10 +14,10 @@ class ClientsController < ApplicationController
 
     def create
         @client = Client.new(params_client)
-        if @client.save!
-            redirect_to clients_path
+        if @client.save
+            redirect_to clients_path, notice: t('messages.new_client_success')
         else
-            render :new
+            redirect_to new_client_path, alert: @client.errors.full_messages
         end
     end
 
@@ -25,10 +25,10 @@ class ClientsController < ApplicationController
     end
 
     def update
-        if @client.update!(params_client)
-            redirect_to clients_path
+        if @client.update(params_client)
+            redirect_to clients_path, notice: t('messages.edit_client_success')
         else
-            render :edit
+            redirect_to request.referrer, alert: @client.errors.full_messages
         end
     end
 
@@ -37,8 +37,11 @@ class ClientsController < ApplicationController
     end
 
     def destroy
-        @client.destroy
-        redirect_to clients_path
+        if @client.destroy
+            redirect_to clients_path, notice: t('messages.destroy_client')
+        else
+            render :index
+        end
     end
 
     private
@@ -48,7 +51,8 @@ class ClientsController < ApplicationController
     end
 
     def params_client
-        params.require(:client).permit(:id, :first_name, :last_name, :email, :telephone, :address, :zip_code).merge(admin_id: current_admin.id)
+        params.require(:client).permit(:id, :first_name, :last_name, :email, :telephone, :address, :zip_code)
     end
+    
 end
     

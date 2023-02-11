@@ -24,8 +24,8 @@ namespace :dev do
       address: Faker::Address.street_address,
       zip_code: Faker::Address.zip_code,
       telephone: Faker::PhoneNumber.cell_phone,
-      email: Faker::Internet.email(name: :first_name),
-      admin_id: 1)    
+      email: Faker::Internet.email(name: :first_name)
+    )    
     end
   end
 

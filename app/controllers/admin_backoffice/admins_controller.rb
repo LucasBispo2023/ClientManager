@@ -16,7 +16,7 @@ class AdminBackoffice::AdminsController < ApplicationController
     if @admin.save
       redirect_to admin_backoffice_admins_path, notice: "Administrador cadastrado com sucesso!"
     else
-      render :new
+      redirect_to new_admin_backoffice_admin_path, alert: @admin.errors.full_messages
     end
   end
 
@@ -28,7 +28,7 @@ class AdminBackoffice::AdminsController < ApplicationController
       AdminMailer.update_email(current_admin, @admin).deliver_now
       redirect_to admin_backoffice_admins_path, notice: "Administrador atualizado com sucesso!"
     else
-      render :edit
+      redirect_to edit_admin_backoffice_admin_path, alert: @admin.errors.full_messages
     end
   end
 
@@ -36,7 +36,7 @@ class AdminBackoffice::AdminsController < ApplicationController
     if @admin.destroy
       redirect_to admin_backoffice_admins_path, notice: "Administrador excluído com sucesso!"
     else
-      render :index
+      redirect_to admin_backoffice_admins_path, alert: @admin.errors.full_messages
     end
   end
 

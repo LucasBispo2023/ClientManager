@@ -17,17 +17,18 @@
   </div>
   <div class="col-md-6">
     <%= form.label :telephone, class:"form-label"%>
-    <%= form.phone_field :telephone, class:"form-control"%>
+    <%= form.text_field :telephone, class:"form-control", id:"telephone-field", maxlength: 14%>
   </div>
   <div class="col-md-2">
     <%= form.label :zip_code, class:"form-label"%>
-    <%= form.text_field :zip_code, class:"form-control"%>
+    <%= form.text_field :zip_code, class:"form-control", id:"zip_code", maxlength: 10%>
   </div>
   <div class="col-md-4 d-flex" style="flex-direction:column-reverse">
-     <%= form.submit "Submit", class:"btn btn-success",style:"height:fit-content", id:"submit-button"%>
+     <%= form.submit t('message.submit'), class:"btn btn-success",style:"height:fit-content", id:"submit-button"%>
 <%end%>
   </div>
   <hr>
   <div class="d-flex ms-auto" style="flex-direction:column-reverse">
      <%= link_to "Voltar",:back, class:"btn btn-primary",style:"height:fit-content;",id:"back-button"%>
   </div>
+

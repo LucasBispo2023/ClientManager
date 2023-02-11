@@ -1,2 +1,9 @@
 <h1 class="display-5 fw-bold"><%= t('title.edit_client')%></h1>
 <%= render partial: "clients/shared/form" %>
+
+<script>
+$(document).ready(function(){
+  $('#telephone-field').mask("(99) 99999-9999");
+  $('#zip_code').mask("99999-999");
+});
+</script>

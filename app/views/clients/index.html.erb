@@ -1,5 +1,6 @@
 <h1 class="display-5 fw-bold"><%= t('title.index')%></h1>
-  <table class="table table-hover table-bordered table-responsive">
+<div class="table-responsive">
+  <table class="table table-hover table-bordered">
     <thead>
       <tr>
             <th scope="col"><%=  link_to Client.human_attribute_name(:id), :sort => "id"%></th>
@@ -24,9 +25,9 @@
             <td> <%=client.first_name%> </td>
             <td> <%=client.last_name%> </td>
             <td> <%=client.email%> </td>
-            <td> <%=client.telephone%> </td>
+            <td id="telephone_index"> <%=client.telephone %> </td>
             <td> <%=client.address%> </td>
-            <td> <%=client.zip_code%> </td>
+            <td id="zip_code_index"> <%=client.zip_code%> </td>
             <td class="btn-group">
                 <%= link_to client_path(client.id),method: :get,  class: "btn btn-success btn-circle" do %>
                     <i class="fas fa-search"></i>
@@ -36,7 +37,7 @@
                     <i class="fas fa-edit"></i>
                 <% end %>
 
-                <%= button_to client_path(client.id), method: :delete, class: "btn btn-danger btn-circle",form: {style:"display:inline-block"}, data: {turbo_confirm: t('messages.confirm_with', item: "#{client.first_name} #{client.last_name}")} do %>
+                <%= button_to client_path(client.id), method: :delete,style:"border-bottom-left-radius: 0; border-top-left-radius: 0;", class: "btn btn-danger btn-circle",form: {style:"display:inline-block"}, data: {turbo_confirm: t('messages.confirm_with', item: "#{client.first_name} #{client.last_name}")} do %>
                     <i class="fas fa-trash"></i>
                 <% end %>
              </td>
@@ -47,3 +48,4 @@
 
 <%= paginate @clients %>
 
+</div>

@@ -20,7 +20,7 @@ pt-BR:
         email: Email
         first_name: Nome
         last_name: Sobrenome
-        telephone: Telefone
+        telephone: Celular
         address: Endereço
         zip_code: CEP
         created_at: Criado Em
@@ -31,5 +31,34 @@ pt-BR:
           attributes:
             email:
               taken: já está sendo utilizado
+              blank:  em branco, por favor coloque um email válido.
+            password:
+              blank:  em branco, por favor digite uma senha válida.
+              too_short: muito curta, digite uma senha de, no mínimo, 6 caracteres.
+            password_confirmation:
+              blank: em branco, por favor confirme sua senha.
+              confirmation: diferente da senha, por favor coloque senhas iguais.
+              too_short: muito curta, digite uma senha de, no mínimo, 6 caractéres.
+        client:
+          attributes:
+            first_name:
+              blank: em branco, por favor preencha o campo corretamente.
+              too_short: muito curto, é necessário ter, no mínimo, três letras.
+            last_name:
+              blank: em branco, por favor preencha o campo corretamente.
+              too_short: muito curto, é necessário ter, no mínimo, três letras.
+            email:
+              blank: em branco, por favor preencha o campo corretamente.
+              too_short: muito curto, é necessário ter, no mínimo, três letras.
+              taken: já cadastrado.
+            telephone:
+              blank: em branco, por favor preencha o campo corretamente.
+              wrong_length: inválido. Por favor, digite o campo com todos os dígitos, ex. (99)99999-9999.
+            zip_code:
+              blank: em branco, por favor preencha o campo corretamente.
+              wrong_length: inválido. Por favor, digite o campo com todos os digitos, ex. 99999-999.
+            address:
+              blank: em branco, por favor preencha o campo corretamente.
+
       messages:
         record_invalid: Não foi possível salvar.

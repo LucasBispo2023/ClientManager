@@ -6,13 +6,13 @@
     <h3 class=""><%=t('devise.passwords.new.forgot_your_password')%></h3>
   <%= render "admins/shared/error_messages", resource: resource %>
 
-  <div class="form-floating">
+  <div class="form">
     <%= f.label :email, class:'form-label' %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
   </div>
 
-  <div class="actions m-3">
-    <%= f.submit t('devise.passwords.new.send_me_reset_password_instructions'), class:"btn btn-primary" %>
+  <div class="mx-auto actions m-3">
+    <%= f.submit t('devise.passwords.new.send_me_reset_password_instructions'), class:"btn btn-lg btn-primary w-100" %>
   </div> <hr>
 <% end %>
 

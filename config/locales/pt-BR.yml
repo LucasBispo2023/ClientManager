@@ -9,3 +9,12 @@ pt-BR:
     confirm_with: Tem certeza que deseja apagar cadastro de [%{item}] ?
     new: Novo Cadastro de
     editing: Editando Cadastro de
+    tel_error: Por favor, coloque um número de telefone válido no formato '(xx)xxxxx-xxxx'
+    new_client_success: Cliente cadastro com sucesso!
+    edit_client_success: Cadastro do cliente editado com sucesso!
+    edit_client_fail: Não foi possível editar o cliente pelo seguinte motivo - [%{item}]
+    destroy_client: Cadastro do cliente foi deletado com sucesso!
+    submit: Cadastrar
+    log_out: Encerrar Sessão
+    login: Iniciar Sessão
+    sign_up: Inscrever-se

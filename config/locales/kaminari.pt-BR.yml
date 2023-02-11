@@ -9,8 +9,8 @@ pt-BR:
           other: A apresentar <b>all %{count}</b> %{entry_name}
   views:
     pagination:
-      first: 
-      last: 
+      first: Primeira
+      last: Última
       next: Próximo &rsaquo;
       previous: "&lsaquo; Anterior"
       truncate: "&hellip;"

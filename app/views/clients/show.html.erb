@@ -6,6 +6,8 @@ var button = document.getElementById("submit-button");
 var div = button.closest("div");
 for(i=0; i<field.length;i++){field[i].disabled = true;};
 button.disabled = true;
-
-
+$(document).ready(function(){
+  $('#telephone-field').mask("(99) 99999-9999");
+  $('#zip_code').mask("99999-999");
+});
 </script>

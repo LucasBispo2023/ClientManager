@@ -44,7 +44,7 @@ pt-BR:
       locked: A sua conta está bloqueada.
       not_found_in_database: "%{authentication_keys} ou senha inválidos."
       timeout: A sua sessão expirou, por favor, faça login novamente para continuar.
-      unauthenticated: Para continuar, faça login ou registre-se.
+      unauthenticated: Para continuar, faça o login ou registre-se.
       unconfirmed: Antes de continuar, confirme a sua conta.
     mailer:
       confirmation_instructions:
@@ -112,18 +112,18 @@ pt-BR:
       updated: A sua conta foi atualizada com sucesso.
       updated_but_not_signed_in: Sua conta foi atualizada com sucesso, uma vez que sua senha foi alterada será necessário realizar o login novamente.
     sessions:
-      already_signed_out: Logout efetuado com sucesso.
+      already_signed_out: Sessão encerrada com sucesso.
       new:
-        sign_in: Login
-      signed_in: Login efetuado com sucesso.
-      signed_out: Logout efetuado com sucesso.
+        sign_in: Acessar
+      signed_in: Sessão iniciada com sucesso.
+      signed_out: Sessão encerrada com sucesso.
     shared:
       links:
         back: Voltar
         didn_t_receive_confirmation_instructions: Não recebeu instruções de confirmação?
         didn_t_receive_unlock_instructions: Não recebeu instruções de desbloqueio?
         forgot_your_password: Esqueceu sua senha?
-        sign_in: Login
+        sign_in: Acessar
         sign_in_with_provider: Entrar com %{provider}
         sign_up: Inscrever-se
       minimum_password_length:
