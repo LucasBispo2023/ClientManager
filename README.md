@@ -1,9 +1,7 @@
 # README
 
-Exercício de full stack de gerenciamento de clientes.
+Full stack client management exercise.
 
-Para rodar é necessário clonar o repositório e rodar o rails s no seu Gitbash.
+For a quicker view of it in action: https://client-manager.onrender.com/
 
-Para uma visualização mais rápida dele em ação: https://client-manager.onrender.com/ 
-
-Foi hospedado via Render
+It was hosted via Render.
